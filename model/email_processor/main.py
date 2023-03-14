@@ -57,14 +57,19 @@ def parse_email(path):
     files = os.listdir(path)
     error = 0
     df = pd.DataFrame()
+    parsed_df = pd.DataFrame()
     # clear the folder
 
     for file in files:
         with open(path + file) as f:
             try:
                 email_text = f.read()
-                header_dict = parse_email_header(email_text)
-                header_dict = extract_interesting_data(header_dict)
+                parsed = parse_email_header(email_text)
+
+                # concat the parsed email to a parsed dataframe at index number datatype
+                parsed_df = pd.concat([parsed_df, pd.DataFrame(parsed, index=[file], columns=["From", "Subject", "Received"])], ignore_index=True)
+
+                header_dict = extract_interesting_data(parsed)
                 header_dict = quantify_normalize(header_dict)
                 # extract the FEATURES_TO_EXTRACT if exist in header_dict
                 temp = pd.DataFrame()
@@ -92,4 +97,4 @@ def parse_email(path):
         # remove the original
         # os.remove(path + file)
 
-    return df, error
+    return df, parsed_df, error
