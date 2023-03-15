@@ -61,14 +61,16 @@ class GUI:
 
         # Create a frame for the scroll bar
         frame = tk.Frame(self.window)
-        frame.grid(row=0, column=1, sticky="ns")
+        frame.grid(row=1, column=2, sticky="ns")
 
-        # Create a listbox to display the names and ages
-        listbox = tk.Listbox(self.window)
-        listbox.grid(row=0, column=0, sticky="nsew")
+        # Create a listbox
+        tk.Label(self.window, text='Spam Emails:').grid(row=0, column=0)
+        listbox = tk.Listbox(self.window, width=100)
+        listbox.grid(row=1, column=0, sticky="nsew")
 
-        for i in range(1000):
-            listbox.insert("end", "This is line number " + str(i))
+        # fill listbox with spam emails
+        for spam in prediction[0]:
+            listbox.insert('end', 'From:' + spam['From'] + '; Subject:' + spam['Subject'])
 
         # Create a scroll bar
         scrollbar = tk.Scrollbar(frame, orient="vertical", command=listbox.yview)
