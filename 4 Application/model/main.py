@@ -6,7 +6,7 @@ from .email_processor import parse_email
 from .model import load_model
 
 
-def run(username, password, result : queue.Queue, folder="inbox", limit=10):
+def run(username, password, result : queue.Queue, folder="inbox", limit=50):
     # check if a temp folder exists if not create one
     if not os.path.exists("temp"):
         os.mkdir("temp")
