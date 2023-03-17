@@ -13,7 +13,7 @@ Ready to take control of your inbox and fight back against spam? Download SpamDe
 To use SpamDetector9000, follow these simple steps:
 
 1. Clone the repository to your local machine.
-2. Install the required packages by running pip install -r requirements.txt.
+2. Navigate to the 4 Application folder and running pip install -r requirements.txt.
 3. Launch the main.py file.
 4. The SpamDetector9000 GUI will pop up on your screen.
 5. Login to your email account using your email address and app-specific password. You can generate an app-specific password from your email service provider's website. (Right now the default login is set to a test account create new password at https://myaccount.google.com/apppasswords)
