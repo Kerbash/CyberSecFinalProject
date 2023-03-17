@@ -12,10 +12,9 @@ Ready to take control of your inbox and fight back against spam? Download SpamDe
 
 To use SpamDetector9000, follow these simple steps:
 
-1. Clone the repository to your local machine.
-2. Navigate to the 4 Application folder and running pip install -r requirements.txt.
-3. Launch the main.py file.
-4. The SpamDetector9000 GUI will pop up on your screen.
-5. Login to your email account using your email address and app-specific password. You can generate an app-specific password from your email service provider's website. (Right now the default login is set to a test account create new password at https://myaccount.google.com/apppasswords)
-6. Once you're logged in, SpamDetector9000 will scan your inbox and identify any spam messages.
-7. The results will be displayed on the GUI, including the total number of spam messages, and the specific emails that have been flagged as spam.
+1. Navigate to the 4 Application folder and running pip install -r requirements.txt.
+2. Launch the main.py file.
+3. The SpamDetector9000 GUI will pop up on your screen.
+4. Login to your email account using your email address and app-specific password. You can generate an app-specific password from your email service provider's website. (Right now the default login is set to a test account create new password at https://myaccount.google.com/apppasswords)
+5. Once you're logged in, SpamDetector9000 will scan your inbox and identify any spam messages.
+6. The results will be displayed on the GUI, including the total number of spam messages, and the specific emails that have been flagged as spam.
