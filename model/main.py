@@ -7,6 +7,10 @@ from .model import load_model
 
 
 def run(username, password, result : queue.Queue, folder="inbox", limit=10):
+    # check if a temp folder exists if not create one
+    if not os.path.exists("temp"):
+        os.mkdir("temp")
+
     # call the email puller
     email_puller = EmailHeaderPuller(username, password)
     email_puller.pull_headers(folder, limit)

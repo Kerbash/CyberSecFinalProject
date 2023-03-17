@@ -64,7 +64,7 @@ class GUI:
         frame.grid(row=1, column=2, sticky="ns")
 
         # Create a listbox
-        tk.Label(self.window, text='Spam Emails:').grid(row=0, column=0)
+        tk.Label(self.window, text=f"Found {len(prediction[0])} Spam Emails").grid(row=0, column=0)
         listbox = tk.Listbox(self.window, width=100)
         listbox.grid(row=1, column=0, sticky="nsew")
 
